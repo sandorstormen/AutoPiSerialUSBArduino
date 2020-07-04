@@ -11,3 +11,4 @@ dependencies = ["build"]
 
 [env]
 PKG_CONFIG_ALLOW_CROSS="1"
+RUSTFLAGS='-C link-args=-s -C opt-level=z -C lto'

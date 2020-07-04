@@ -16,11 +16,11 @@ fn main() {
         panic!("Only ascii in argument");
     }
     //let settings = SerialPortSettings::new();
-    let mut port = match serialport::open("/dev/ttyACM0") {
+    let mut port = match serialport::open("/dev/ttyUSB4") {
         Ok(p) => p,
-        Err(_e) => match serialport::open("/dev/ttyACM1") {
+        Err(_e) => match serialport::open("/dev/ttyUSB5") {
             Ok(p) => p,
-            Err(e) => panic!("Could not open /dev/ttyACM0 or /dev/ttyACM1\n{}", e),
+            Err(e) => panic!("Could not open /dev/ttyUSB4 or /dev/ttyUSB5\n{}", e),
         },
     };
 
